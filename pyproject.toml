@@ -1,0 +1,25 @@
+[project]
+name = "fastapi-angular-study"
+version = "0.1.0"
+description = "Projeto prático desenvolvido durante o projeto de P&D AX Academy, da LG Electronics em parceria com a Fundação Paulo Feitosa, explorando FastAPI, SQLAlchemy, Angular, autenticação JWT e Docker."
+readme = "README.md"
+authors = [
+    { name = "David Daniel", email = "dev.davidandrade@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.141.1",
+    "pwdlib[argon2]>=0.3.0",
+    "pyjwt>=2.13.0",
+    "python-multipart>=0.0.32",
+    "sqlalchemy>=2.0.51",
+    "uvicorn>=0.52.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = "src"
+module-name = "app"
